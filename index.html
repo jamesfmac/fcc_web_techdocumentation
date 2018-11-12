@@ -4,31 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
 
     <title>Document</title>
 </head>
 
 <body>
     <div id="page-container">
-        <nav id="navbar">
-            <header>Javascript ES7</header>
-            <a class="nav-link" href="#Section_One"
+        <nav id="navbar" class="side-nav">
+            <header>
+                <h1>ES7 Documentation</h1>
+            </header>
+            <a class="nav-link" href="#inroduction">Introduction</a>
+            <a class="nav-link" href="#constandlet">Const and Let</a>
         </nav>
 
 
         <main id="main-doc">
 
-            <section class="main-section" id="Section_One">
-                <header>Section one</header>
-                <p>Paragraph one</p>
-                <p>Paragraph two</p>
+            <section class="main-section" id="introduction">
+                <header>Introduction</header>
+                <p>JavaScript ES6 brings new syntax and new awesome features to make your code more modern and more readable.
+                    It allows you to write less code and do more. ES6 introduces us to many great features like arrow functions,
+                    template strings, class destruction, Modules… and more. Let’s take a look.</p>
+
                 <code>let x = 'red'</code>
+
+                <p>Code snippets like this will be used to provide real world examples</p>
             </section>
+
+
+            <section class="main-section" id="constandlet">
+                <header>Const and Let</header>
+                <p>const is a new keyword in ES6 for declaring variables. const is more powerful than var. Once used, the variable
+                    can’t be reassigned. In other words, it’s an immutable variable except when it used with objects. </p>
+                <p>This is really useful for targeting the selectors. For example, when we have a single button that fires an
+                    event, or when you want to select an HTML element in JavaScript, use const instead of var. This is because
+                    var is ‘hoisted’. It’s always preferable to use const when don’t want to reassign the variable .</p>
+
+                <code>
+                    // ES5
+                    <i>var</i> myBtn = document.getElementById('myBtn');
+
+                    //ES6
+                    <i>const</i> myBtn = document.getElementById('myBtn');                    
+
+                </code>
+
+                <p>Code snippets like this will be used to provide real world examples</p>
+            </section>
+
 
         </main>
 
     </div>
 
+    <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
 </body>
 
 </html>
