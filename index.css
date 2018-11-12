@@ -7,13 +7,14 @@
 }
 
 .side-nav{
-    width: 400px;
+    width: 300px;
     height: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    box-shadow: 0px 0px 5px grey
+    box-shadow: 0px 0px 5px grey;
+    position: fixed;
     
 }
 .side-nav > header{
@@ -36,6 +37,7 @@ code {
 
 .main-section{
     padding: 20px;
+    margin-left: 350px;
 }
 
 .main-section > header{
