@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
-    <title>Document</title>
+    <title>ES6 Quick Reference</title>
 </head>
 
 <body>
@@ -17,6 +20,10 @@
             </header>
             <a class="nav-link" href="#Introduction">Introduction</a>
             <a class="nav-link" href="#const_and_let">Const and Let</a>
+            <a class="nav-link" href="#arrow_functions">Arrow Functions</a>
+            <a class="nav-link" href="#template_literals">Template Literals</a>
+            <a class="nav-link" href="#default_parameters">Default Parameters</a>
+            <a class="nav-link" href="#import_and_export">Import and Export</a>
         </nav>
 
 
@@ -28,9 +35,18 @@
                     It allows you to write less code and do more. ES6 introduces us to many great features like arrow functions,
                     template strings, class destruction, Modules… and more. Let’s take a look.</p>
 
-                <code>let x = 'red'</code>
+                <pre><code class="js">let x = 'red'</code></pre>
 
                 <p>Code snippets like this will be used to provide real world examples</p>
+                <p>There are a number of advantages that ES6 has over ES5:</p>
+                <ul>
+                    <li>Blocked scope variables</li>
+                    <li>Classes</li>
+                    <li>Promosis</li>
+                    <li>Modules</li>
+                    <li>Spread</li>
+                </ul>
+                <p>Below we cover some of the most useful features that you can start using today. </p>
             </section>
 
 
@@ -41,17 +57,85 @@
                 <p>This is really useful for targeting the selectors. For example, when we have a single button that fires an
                     event, or when you want to select an HTML element in JavaScript, use const instead of var. This is because
                     var is ‘hoisted’. It’s always preferable to use const when don’t want to reassign the variable .</p>
-
-                <code>
+                <pre>
+                <code class="js">
                     // ES5
                     <i>var</i> myBtn = document.getElementById('myBtn');
 
                     //ES6
-                    <i>const</i> myBtn = document.getElementById('myBtn');                    
-
-                </code>
+                    <i>const</i> myBtn = document.getElementById('myBtn');</code></pre>
 
                 <p>Code snippets like this will be used to provide real world examples</p>
+            </section>
+            <section class="main-section" id="arrow_functions">
+                <header>Arrow Functions</header>
+                <p>
+                    The arrow function is really awesome, and makes your code more readable, more structured, and look like modern code. Instead
+                    of using this:
+                </p>
+                <pre>
+                <code class="js">// ES5 
+                        function myFunc(name){
+                            return 'Hello' + name;
+                        }
+                        console.log(myFunc('James'));
+                        // output</code></pre>
+                <p>
+                    Use this:
+                </p>
+                <pre>
+                <code class="js">// ES6
+                    cost myFunc= name => 'Hello' + name
+
+                    console.log(myFunc('James'))
+                    //output</code></pre>
+                <p>
+                    As you see, the arrow function seems more readable and clean! You won’t need to use the old syntax anymore. Also, you can
+                    use Arrow function with map, filter, and reduce built-in functions.
+                </p>
+                <pre>
+                <code class="js">
+                    // ES5
+                    const myArray = ['tony', 'fred', 'lucy', 5]
+                    let Arr1 = myArray.map(function(item){
+                        return item;
+                    })
+                    // ES6
+                    let Arr2 = myArray.map(item=>item)
+                </code></pre>
+                <p>
+                    The map function with arrows looks more clear and readable than map in ES5. With ES6 you can write shorter and smarter code.
+                    You can use the same with filter and reduce
+                </p>
+            </section>
+            <section class="main-section" id="template_literals">
+                <header>Template Literals</header>
+                <p>
+                    Template literals or template strings are pretty cool. We don’t have to use the plus (+) operator to concatenate strings,
+                    or when we want to use a variable inside a string. The old syntax:
+                </p>
+                <pre><code class="js"> // ES5
+                    function myFunc1(name,age){
+                        return 'Hi ' + name + ', You are a ' + age + 'year old!';
+                    }
+                    console.log(myFunc1('James', 28))
+                    //output --> Hi James, you are a 28 year old</code></pre>
+                <p>
+                    With the new ES6 syntax:
+                </p>
+                <pre><code class="js"> // ES6
+                    myFunc1 = (name,age) => {
+                        return 'Hi ${name}, you are a ${age} year old!';
+                    }
+                    console.log(myFunc1('James', 28))
+                    //output --> Hi James, you are a 28 year old</code></pre>
+
+            </section>
+            <section class="main-section" id="default_parameters">
+                <header>Default Parameters</header>
+            </section>
+            <section class="main-section" id="import_and_export">
+                <header>Import and Export</header>
             </section>
 
 
@@ -60,6 +144,7 @@
     </div>
 
     <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+    
 </body>
 
 </html>
